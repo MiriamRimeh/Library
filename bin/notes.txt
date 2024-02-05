@@ -1,0 +1,54 @@
+Book {
+    author
+    title
+    genre
+    short description
+    year of release
+    key words
+    rating
+    ISBN
+}
+
+User {
+    username
+    password
+    access level - it could be admin or client
+}
+
+login - after saying login the user is asked for credentials
+        - check if this user exists > if exists - "Welcome <username>"
+        - if already logged in, the user gets a message "Already logged in"
+logout - user leaves system and the programme shows home screen
+
+books all - lists all books (title, author, genre, ISBN)
+books infor (isbn_value)  - lists all the info about a book
+books find (credentials, name of credentials) - example books find title Introduction to programming
+books sort (credentials, [asc|desc]) - sorts books based on the credentials required
+users add (username, password)
+users remove(username)
+
+open - opens a file, if file doesn't exists, it creates such file
+close - closes the currently opened file, it deletes the information in the file after closing
+save - saves the changes into the currently opened file
+save as - saves a file in a chosen by the user directory
+help - lists all commands
+exit - exists the program
+
+
+command     |  user?   | admin only?
+-----------------------------------
+open        |  -       |  -
+close       |  -       |  -
+save        |  -       |  -
+help        |  -       |  -
+login       |  -       |  -
+logout      |  yes     |  -
+exit        |  -       |  -
+books all   |  yes     |  -
+books find  |  yes     |  -
+books sort  |  yes     |  -
+books view  |  yes     |  -
+books add   |  yes     |  yes
+books remove|  yes     |  yes
+users add   |  yes     |  yes
+users remove|  yes     |  yes
